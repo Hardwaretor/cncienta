@@ -20,18 +20,8 @@ Enjoy this project !!!
 [![license](https://img.shields.io/github/license/anthonynahas/ngx-auth-firebaseui.svg?style=flat-square)](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/LICENSE)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/gdi2290/awesome-angular)
 
-<h1> CADEOS.io </h1>  
-<h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM</h2>
-
-<h3>Official announcement: 
-
-https://twitter.com/CadeosI/status/1068175488659714048
-
-Project team background:
-
-https://www.linkedin.com/in/guillermo-galindo-saeta-749a2557
-https://www.linkedin.com/in/jes%C3%BAs-moya-galindo-bb24861a
-https://www.linkedin.com/in/javier-saeta-hidalgo
+<h1> CNCienta.com </h1>  
+<h2>PROTOTYPING-3D PRINTING-ROBOTIC DESIGN-MACHINING-HOME ART</h2>
 
 Project basic information:
 
@@ -42,22 +32,6 @@ With CADEOS.io you can design any mechanical and electronic component with our d
 CADEOS.io platform will host a large gallery of components from thousands of different brands and will be responsible of providing the most extensive resources as possible for an easy product composition.
 By creating your portfolio of suppliers you will have the best advice and direct communication with the best professionals in any industry around the world. Each area will have their own communication channels and chatrooms.
 With every creation within your dynamic user profile, you will add value to all your products, 3D models, 3D printer parts, electronic schemes, etc., favouring the bids and sales which will be a success in CADEOS.io Platform. Your work will never be lost or forgotten and will be revaluated from time to time with our token ADE.
-
-Media publications:
-
-https://koreos.io/News/412220
-https://medium.com/cadeos-io
-https://www.stateofthedapps.com/dapps/cadeos
-https://t.me/cadeos
-https://marketcap.one/es/m/ADE
-
-Tradeable exchanges:
-
-https://token.store/eos/trade/cadeositoken-ade-eos
-https://newdex.io/trade/cadeositoken-ade-eos
-https://findex.pro/trade/cadeositoken_ADE-eosio.token_EOS
-https://eosdaq.com/exchange/ADE_EOS
-https://mydex.win/
 
 </h3>
 
