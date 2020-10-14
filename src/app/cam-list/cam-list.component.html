@@ -1,0 +1,33 @@
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th style="width: 15%">Name</th>
+          <th style="width: 15%">City</th>
+          <th style="width: 30%">URL</th>
+          <th style="width: 10%">Status</th>
+          <th style="width: 10%">Description</th>
+          <th style="width: 20%"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let cam of cams">
+          <td>{{cam.name}}</td>
+          <td>{{cam.city}}</td>
+          <td>{{cam.url}}</td>
+          <td>{{cam.status}}</td>
+          <td>{{cam.description}}</td>
+          <td style="white-space: nowrap">
+              <a routerLink="updateCam/{{cam.name}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+              <button (click)="deleteCam(cam.name)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="cam.isDeleting">
+                  <span *ngIf="cam.isDeleting" class="spinner-border spinner-border-sm"></span>
+                  <span *ngIf="!cam.isDeleting">Delete</span>
+              </button>
+          </td>
+      </tr>
+      <tr *ngIf="!cams">
+          <td colspan="4" class="text-center">
+              <span class="spinner-border spinner-border-lg align-center"></span>
+          </td>
+      </tr>
+  </tbody>
+</table>

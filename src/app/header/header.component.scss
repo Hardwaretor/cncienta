@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  background-color: white;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 0%;
+
+  .brand {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 17px;
+    }
+
+    h5 {
+      font-family: 'Lobster', cursive;
+      font-size: 23px;
+      margin: 0;
+      letter-spacing: 1px;
+      color: rgb(52, 186, 219);
+      background: linear-gradient(
+        90deg,
+        rgba(52, 186, 219, 0.9878326330532213) 44%,
+        rgba(0, 255, 190, 1) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+
+    li {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      img {
+        width: 80px;
+      }
+
+      .badge {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        color: white;
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+        vertical-align: bottom;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 2px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

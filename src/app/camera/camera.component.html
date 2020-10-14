@@ -1,0 +1,16 @@
+<div style="text-align:center">
+  <div>
+  <webcam [height]="400" [width]="400" [trigger]="triggerObservable" (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+  [allowCameraSwitch]="allowCameraSwitch" [switchCamera]="nextWebcamObservable" [videoOptions]="videoOptions" (cameraSwitched)="cameraWasSwitched($event)"
+  (initError)="handleInitError($event)"></webcam>
+  <br/>
+  
+  <div class="btn btn-primary" (click)="triggerSnapshot();" title="Take Picture">Take Snapshot</div>
+  <div class="btn btn-primary" (click)="showNextWebcam(true);" title="Switch Camera">Change Camera</div>
+
+  </div>
+  </div>
+  <h4 *ngIf="errors.length > 0">Messages:</h4>
+  <ul *ngFor="let error of errors">
+  <li>{{error | json}}</li>
+  </ul>

@@ -1,0 +1,37 @@
+{
+  "machines": [
+    {
+      "user_id": 1,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta2000BASIC",
+      "city": "Mengibar",
+      "description": "CNCienta2000DUO",
+      "status": "On"
+    },
+    {
+      "user_id": 1,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta2000BASIC",
+      "city": "Mengibar",
+      "description": "CNCienta2000DUO",
+      "status": "On"
+    },
+    {
+      "user_id": 2,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta2000BASIC",
+      "city": "Mengibar",
+      "description": "CNCienta2000DUO",
+      "status": "On"
+    },
+    {
+      "user_id": 2,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta2000BASIC",
+      "city": "Mengibar",
+      "description": "CNCienta2000DUO",
+      "status": "On"
+    }
+
+  ]
+}

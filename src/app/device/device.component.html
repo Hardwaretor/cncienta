@@ -1,0 +1,104 @@
+<div class="container">
+
+  <div class="row"> 
+    <div class="col-4"> 
+
+      <section class="preference">
+         <h3>Light</h3>
+         <div>
+            <button class="btn btn-primary" onclick="toggle(1)">ON</button>
+            <button class="btn btn-primary" onclick="toggle(0)">OFF</button>
+         </div>
+     </section>
+
+     <section class="preference">
+      <h3>Vacuum</h3>
+      <div>
+         <button class="btn btn-primary" onclick="toggle1(1)">ON</button>
+         <button class="btn btn-primary" onclick="toggle1(0)">OFF</button>
+      </div>
+  </section>
+
+  <section class="preference">
+    <h3>Water</h3>
+    <div>
+       <button class="btn btn-primary" onclick="toggle2(1)">ON</button>
+       <button class="btn btn-primary" onclick="toggle2(0)">OFF</button>
+    </div>
+</section>
+
+<section class="preference">
+  <h3>Extractor</h3>
+  <div>
+     <button class="btn btn-primary" onclick="toggle3(1)">ON</button>
+     <button class="btn btn-primary" onclick="toggle3(0)">OFF</button>
+  </div>
+</section>
+
+<section class="preference">
+  <h3>Extractor</h3>
+  <div>
+     <button class="btn btn-primary" onclick="toggle3(1)">ON</button>
+     <button class="btn btn-primary" onclick="toggle3(0)">OFF</button>
+  </div>
+</section>
+
+</div>
+
+<div class="col-4">
+
+  <section class="preference">
+    <div>
+       <button class="btn btn-primary" onclick="selectx(1)">X</button>
+       <button class="btn btn-primary" onclick="Selecty(1)">Y</button>
+       <button class="btn btn-primary" onclick="selectz(1)">Z</button>
+       <button class="btn btn-primary" onclick="selecta(1)">A</button>
+    </div>
+  </section>
+
+  <section class="preference" >
+    <div>
+       <button class="btn btn-default" onclick="moveplus(1)"><img src="../../assets/logos/Up.png" width="140" /></button>
+       <button class="btn btn-default" onclick="moveless(1)"><img src="../../assets/logos/Down.png" width="140" /></button>
+
+    </div>
+  </section>
+
+</div>
+
+
+
+<div class="col-4">
+  <div style="margin: 2%;">
+  <canvas data-type="radial-gauge"
+  width="180" 
+  height="180"
+  data-major-ticks="0,20,40,60,80,100"
+  data-highlights='[
+      { "from": 0, "to": 20, "color": "rgba(0,255,0,.15)" },
+      { "from": 20, "to": 40, "color": "#20c997" },
+      { "from": 40, "to": 60, "color": "#28a745" },
+      { "from": 60, "to": 80, "color": "#ffc107" },
+      { "from": 80, "to": 100, "color": "#dc3545" }
+  ]'
+></canvas>
+</div>
+
+<div style="margin: 2%;">
+<canvas data-type="radial-gauge"
+width="180" 
+height="180"
+data-major-ticks="0,20,40,60,80,100"
+data-highlights='[
+    { "from": 0, "to": 20, "color": "rgba(0,255,0,.15)" },
+    { "from": 20, "to": 40, "color": "#20c997" },
+    { "from": 40, "to": 60, "color": "#28a745" },
+    { "from": 60, "to": 80, "color": "#ffc107" },
+    { "from": 80, "to": 100, "color": "#dc3545" }
+]'
+></canvas>
+</div>
+
+
+</div>
+</div>

@@ -1,0 +1,37 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "ggalindo",
+            "password": "123456",
+            "firstName": "Guillermo",
+            "lastName": "Galindo",
+            "email": "g.galindo@cadeos.io",
+            "address": "Pasaje Juan de la Rosa Nº1-1ºB",
+            "city": "Mengibar",
+            "country": "Spain",
+            "postal": "23620",
+            "form_check1": null,
+            "form_check2": null,
+            "token": "Ak23ndp7",
+            "jwToken": "Ak23ndp7"
+        },
+        {
+            "id": 2,
+            "username": "dgalindo",
+            "password": "123456",
+            "firstName": "Guillermo",
+            "lastName": "Galindo",
+            "email": "g.galindo@cadeos.io",
+            "address": "Pasaje Juan de la Rosa Nº1-1ºB",
+            "city": "Mengibar",
+            "country": "Spain",
+            "postal": "23620",
+            "form_check1": null,
+            "form_check2": null,
+            "token": "Ak23ndp7",
+            "jwToken": "Ak23ndp7"
+        }
+
+    ]
+}

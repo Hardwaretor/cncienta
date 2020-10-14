@@ -1,0 +1,25 @@
+{
+  "iotusers": [
+    {
+      "user_id": 1,
+      "username": "ggalindo",
+      "password": "123456",
+      "url": "https://cncienta.com",
+      "company": "g.galindo@cadeos.io",
+      "creator": "Guillermo Galindo",
+      "industry": "design",
+      "location": "mengibar"
+    },
+    {
+      "user_id": 1,
+      "username": "dgalindo",
+      "password": "123456",
+      "url": "https://cncienta.com",
+      "company": "g.galindo@cadeos.io",
+      "creator": "Guillermo Galindo",
+      "industry": "design",
+      "location": "mengibar"
+    }
+
+  ]
+}

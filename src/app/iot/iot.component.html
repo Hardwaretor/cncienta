@@ -1,0 +1,115 @@
+<head>
+
+    <meta name="Login" content="Author: Guillermo Galindo,
+      Illustrator: Guillermo Galindo">
+  
+  </head>
+
+  <!doctype html>
+  <html>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+
+          <div class="iotlogin-card">
+            <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Cams</h1>
+            <button [disabled]="loading" class="btn btn-primary">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Add Cam
+          </button>
+            
+            <div class="card-body">
+      
+              <app-cam-list></app-cam-list>
+      
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-6">
+
+                   <div class="iotlogin-card">
+            <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Web Cam</h1>
+            <div class="card-body">
+      
+              <app-camera (pictureTaken)="handleImage($event)"></app-camera>
+              <div class="snapshot" *ngIf="webcamImage">
+              <img [src]="webcamImage.imageAsDataUrl" />
+              </div>
+      
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+
+        <div class="iotlogin-card">
+          <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Machines</h1>
+          <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Add Machine
+        </button>
+          <div class="card-body">
+    
+            <app-machine-list></app-machine-list>
+    
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-6">
+
+      <div class="iotlogin-card">
+          <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Machine Control</h1>
+          <div class="card-body">
+    
+            <app-machine></app-machine>
+            
+    
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+
+      <div class="iotlogin-card">
+        <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Devices</h1>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Add Device
+      </button>
+        <div class="card-body">
+  
+          <app-device-list></app-device-list>
+  
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-6">
+
+               <div class="iotlogin-card">
+        <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Device Control</h1>
+        <div class="card-body">
+  
+          <app-device></app-device>
+  
+        </div>
+      </div>
+    </div>
+
+</div>
+
+</div>
+
+  </html>

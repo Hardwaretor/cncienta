@@ -1,0 +1,33 @@
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th style="width: 15%">Name</th>
+          <th style="width: 15%">City</th>
+          <th style="width: 30%">URL</th>
+          <th style="width: 10%">Status</th>
+          <th style="width: 10%">Description</th>
+          <th style="width: 20%"></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let device of devices">
+          <td>{{device.name}}</td>
+          <td>{{device.city}}</td>
+          <td>{{device.url}}</td>
+          <td>{{device.status}}</td>
+          <td>{{device.description}}</td>
+          <td style="white-space: nowrap">
+              <a routerLink="updateDevice/{{device.name}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+              <button (click)="deleteDevice(device.name)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="device.isDeleting">
+                  <span *ngIf="device.isDeleting" class="spinner-border spinner-border-sm"></span>
+                  <span *ngIf="!device.isDeleting">Delete</span>
+              </button>
+          </td>
+      </tr>
+      <tr *ngIf="!devices">
+          <td colspan="4" class="text-center">
+              <span class="spinner-border spinner-border-lg align-center"></span>
+          </td>
+      </tr>
+  </tbody>
+</table>
