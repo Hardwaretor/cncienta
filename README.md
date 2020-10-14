@@ -3,13 +3,7 @@
   <img src="/src/assets/logos/LOGO corona negra ingles psyco.png" width="100%" style="text-align: center;">
 </p>
 
-Install npm packages " npm install "
 
-Run Front-End Angular Server " ng serve "
-
-Runt Back-End Nodejs Server " npm start" 
-
-Enjoy this project !!!
 
 [![docs: typedoc](https://img.shields.io/badge/docs-typedoc-4D0080.svg)](https://ngx-auth-firebaseui.firebaseapp.com/doc/index.html)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/AnthonyNahas/ngx-auth-firebaseui/master.svg?label=circleci)](https://circleci.com/gh/AnthonyNahas/ngx-auth-firebaseui)
@@ -19,9 +13,17 @@ Enjoy this project !!!
 
 <h1> CNCienta.com </h1>  
 <h2>PROTOTYPING-3D PRINTING-ROBOTIC DESIGN-MACHINING-HOME ART</h2>
+<h3>
 
 Project basic information:
 
+Install npm packages " npm install "
+
+Run Front-End Angular Server " ng serve "
+
+Runt Back-End Nodejs Server " npm start" 
+
+Enjoy this project !!!
 
 
 </h3>
