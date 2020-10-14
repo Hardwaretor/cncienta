@@ -62,6 +62,5 @@ https://mydex.win/
 </h3>
 
 <p align="center">
-  <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
-  src="/src/assets/CADEOS Logo transparent background2.png">
+  <img alt="/src/assets/logos/corona psyco.png" width="256px" style="text-align: center;">
 </p>
