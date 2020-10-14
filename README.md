@@ -36,5 +36,5 @@ With every creation within your dynamic user profile, you will add value to all 
 </h3>
 
 <p align="center">
-  <img alt="/src/assets/logos/corona psyco.png" width="256px" style="text-align: center;">
+  <img src="/src/assets/logos/corona psyco.png" width="256px" style="text-align: center;">
 </p>
