@@ -1,4 +1,7 @@
-CNCienta.com 
+
+<p align="center">
+  <img src="/src/assets/logos/LOGO corona negra ingles psyco.png" width="100%" style="text-align: center;">
+</p>
 
 Install npm packages " npm install "
 
@@ -7,12 +10,6 @@ Run Front-End Angular Server " ng serve "
 Runt Back-End Nodejs Server " npm start" 
 
 Enjoy this project !!!
-
-
-
-<p align="center">
-  <img src="/src/assets/logos/LOGO corona negra ingles psyco.png" width="100%" style="text-align: center;">
-</p>
 
 [![docs: typedoc](https://img.shields.io/badge/docs-typedoc-4D0080.svg)](https://ngx-auth-firebaseui.firebaseapp.com/doc/index.html)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/AnthonyNahas/ngx-auth-firebaseui/master.svg?label=circleci)](https://circleci.com/gh/AnthonyNahas/ngx-auth-firebaseui)
