@@ -1,0 +1,38 @@
+{
+  "cams": [
+    {
+      "user_id": 1,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta-AmbientTable",
+      "city": "Mengibar",
+      "description": "CNCientaAmbient",
+      "status": "On"
+    },
+    {
+      "user_id": 1,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta-AmbientTable",
+      "city": "Mengibar",
+      "description": "CNCientaAmbient",
+      "status": "On"
+    },
+    {
+      "user_id": 2,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta-AmbientTable",
+      "city": "Mengibar",
+      "description": "CNCientaAmbient",
+      "status": "On"
+    },
+    {
+      "user_id": 2,
+      "url": "https//cncienta.com/ggalindo/machines",
+      "name": "CNCienta-AmbientTable",
+      "city": "Mengibar",
+      "description": "CNCientaAmbient",
+      "status": "On"
+    }
+
+
+  ]
+}
