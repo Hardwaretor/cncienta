@@ -23,6 +23,20 @@ Run Front-End Angular Server " ng serve "
 
 Runt Back-End Nodejs Server " npm start" 
 
+<h2>Public db</h2>
+
+Machines
+
+Products
+
+Cams
+
+Devices
+
+<h2>Private db</h2>
+
+Users
+
 Enjoy this project !!!
 
 
