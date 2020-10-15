@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { User } from '../_models';
-import { Iotuser } from '../_models';
+import { Product } from '../_models';
 import { Machine } from '../_models';
 import { Device } from '../_models';
 
@@ -15,8 +15,8 @@ export class AuthenticationService {
     private userSubject: BehaviorSubject<User>;
     public user: Observable<User>;
 
-    private iotuserSubject: BehaviorSubject<Iotuser>;
-    public iotuser: Observable<Iotuser>;
+    private productSubject: BehaviorSubject<Product>;
+    public product: Observable<Product>;
 
     private machineSubject: BehaviorSubject<Machine>;
     public machine: Observable<Machine>;
@@ -32,8 +32,8 @@ export class AuthenticationService {
         this.userSubject = new BehaviorSubject<User>(null);
         this.user = this.userSubject.asObservable();
 
-        this.iotuserSubject = new BehaviorSubject<Iotuser>(null);
-        this.iotuser = this.iotuserSubject.asObservable();
+        this.productSubject = new BehaviorSubject<Product>(null);
+        this.product = this.productSubject.asObservable();
 
         this.machineSubject = new BehaviorSubject<Machine>(null);
         this.machine = this.machineSubject.asObservable();
@@ -46,8 +46,8 @@ export class AuthenticationService {
         return this.userSubject.value;
     }
 
-    public get iotuserValue(): Iotuser {
-        return this.iotuserSubject.value;
+    public get iotuserValue(): Product {
+        return this.productSubject.value;
     }
 
     public get machineValue(): Machine {
@@ -66,26 +66,12 @@ export class AuthenticationService {
             }));
     }
 
-    iotlogin(username: string, password: string) {
-        return this.http.post<any>(`${environment.apiUrl}/iotusers/authenticate`, { username, password }, { withCredentials: true })
-            .pipe(map(iotuser => {
-                this.iotuserSubject.next(iotuser);
-                return iotuser;
-            }));
-    }
 
     logout() {
         this.http.post<any>(`${environment.apiUrl}/users/revoke-token`, {}, { withCredentials: true }).subscribe();
         this.stopRefreshTokenTimer();
         this.userSubject.next(null);
         this.router.navigate(['/login']);
-    }
-
-    iotlogout() {
-        this.http.post<any>(`${environment.apiUrl}/iotusers/revoke-token`, {}, { withCredentials: true }).subscribe();
-        this.stopRefreshTokenTimer();
-        this.userSubject.next(null);
-        this.router.navigate(['/iot']);
     }
 
     refreshToken() {

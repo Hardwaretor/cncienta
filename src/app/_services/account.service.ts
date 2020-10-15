@@ -6,7 +6,7 @@ import { map,tap } from 'rxjs/operators';
 
 import { environment } from '../../environments/environment';
 import { User } from '../_models';
-import { Iotuser } from '../_models';
+import { Product } from '../_models';
 import { Machine } from '../_models';
 import { Device } from '../_models';
 import { Cam } from '../_models';
@@ -17,8 +17,8 @@ export class AccountService {
     private userSubject: BehaviorSubject<User>;
     public user: Observable<User>;
 
-    private iotuserSubject: BehaviorSubject<Iotuser>;
-    public iotuser: Observable<Iotuser>;
+    private productSubject: BehaviorSubject<Product>;
+    public product: Observable<Product>;
 
     private machineSubject: BehaviorSubject<Machine>;
     public machine: Observable<Machine>;
@@ -38,8 +38,8 @@ export class AccountService {
         this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
         this.user = this.userSubject.asObservable();
 
-        this.iotuserSubject = new BehaviorSubject<Iotuser>(JSON.parse(localStorage.getItem('iotuser')));
-        this.iotuser = this.iotuserSubject.asObservable();
+        this.productSubject = new BehaviorSubject<Product>(JSON.parse(localStorage.getItem('product')));
+        this.product = this.productSubject.asObservable();
 
         this.machineSubject = new BehaviorSubject<Machine>(JSON.parse(localStorage.getItem('machine')));
         this.machine = this.machineSubject.asObservable();
@@ -57,8 +57,8 @@ export class AccountService {
         return this.userSubject.value;
     }
 
-    public get iotuserValue(): Iotuser {
-        return this.iotuserSubject.value;
+    public get productValue(): Product {
+        return this.productSubject.value;
     }
 
     public get machineValue(): Machine {
@@ -86,18 +86,6 @@ export class AccountService {
             
     }
 
-    iotlogin(username: string, password: string,) {
-        return this.http.post<Iotuser>(`${environment.apiUrl}/iotusers/authenticate`, { username, password, })
-            .pipe(tap(ref => {
-                // store user details and jwt token in local storage to keep user logged in between page refreshes
-                localStorage.setItem('iotuser', JSON.stringify(ref));
-
-                this.iotuserSubject.next(ref);
-                return ref;
-            }))
-            
-    }
-
     logout() {
         // remove user from local storage and set current user to null
         localStorage.removeItem('user',);
@@ -105,21 +93,9 @@ export class AccountService {
         this.router.navigate(['/login']);
     }
 
-    iotlogout() {
-        // remove user from local storage and set current user to null
-        localStorage.removeItem('iotuser',);
-        this.userSubject.next(null);
-        this.router.navigate(['/iot']);
-    }
-
     register(user: User) {
         
         return this.http.post(`${environment.apiUrl}/users/register`, user);
-    }
-
-    iotregister(iotuser: Iotuser) {
-        
-        return this.http.post(`${environment.apiUrl}/iotusers/register`, iotuser);
     }
 
     getAll() {
@@ -127,8 +103,7 @@ export class AccountService {
     }
     
     getUser() {
-        return this.http.get<User[]>(`${environment.apiUrl}/user`)
-         
+        return this.http.get<User[]>(`${environment.apiUrl}/user`)    
     }
 
     getAllmachines() {
@@ -141,6 +116,10 @@ export class AccountService {
 
     getAllcams() {
         return this.http.get<Cam[]>(`${environment.apiUrl}/cams`);
+    }
+
+    getAllproducts() {
+        return this.http.get<Product[]>(`${environment.apiUrl}/products`);
     }
 
     getById(id: string) {

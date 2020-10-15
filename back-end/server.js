@@ -1,47 +1,5 @@
-const express = require('express');
+
 const bodyParser = require('body-parser');
-const app = express();
-const port = process.env.PORT || 4000;
-const products = require('./db/products.json');
-const machines = require('./db/machines.json');
-const devices = require('./db/devices.json');
-const cams = require('./db/cams.json');
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  );
-  next();
-});
-
-app.get('/products', (req, res) => {
-  res.json(products);
-});
-
-app.get('/devices', (req, res) => {
-  res.json(devices);
-});
-
-app.get('/cams', (req, res) => {
-  res.json(cams);
-});
-
-app.get('/machines', (req, res) => {
-  res.json(machines);
-});
-
-
-app.listen(port, () => {
-  console.log(`CNCienta.com Public Data Base on port:${port}`);
-});
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 const fs = require('fs')
 const jsonServer = require('json-server')
@@ -54,12 +12,25 @@ const devicesdb = JSON.parse(fs.readFileSync('./back-end/db/devices.json', 'UTF-
 const camsdb = JSON.parse(fs.readFileSync('./back-end/db/cams.json', 'UTF-8'))
 const productsdb = JSON.parse(fs.readFileSync('./back-end/db/products.json', 'UTF-8'))
 
+const products = require('./db/products.json');
+const machines = require('./db/machines.json');
+const devices = require('./db/devices.json');
+const cams = require('./db/cams.json');
 
 server.use(bodyParser.json())
 server.use(jsonServer.defaults());
 
 const SECRET_KEY = "./back-end/config/config.json"
 const expiresIn = '1h'
+
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept'
+  );
+  next();
+});
 
 
 // Create a token from a payload 
@@ -76,6 +47,24 @@ function verifyToken(token) {
 function isAuthenticated({ username, password, }) {
   return userdb.users.findIndex(user => user.username === username && user.password === password) !== -1
 }
+
+////////////////////////// Public db ///////////////////////////
+
+server.get('/products', (req, res) => {
+  res.json(products);
+});
+
+server.get('/devices', (req, res) => {
+  res.json(devices);
+});
+
+server.get('/cams', (req, res) => {
+  res.json(cams);
+});
+
+server.get('/machines', (req, res) => {
+  res.json(machines);
+});
 
 ////////////////////////// Authenticate ///////////////////////////
 
@@ -169,5 +158,5 @@ server.post('/users/register', (req, res) => {
 
 
 server.listen(4001, () => {
-  console.log('CNCienta.com Private Data Base on port:4001')
+  console.log('CNCienta.com Data Base on port:4001')
 })

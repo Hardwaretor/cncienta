@@ -11,5 +11,8 @@ export class ProductListComponent implements OnInit {
 
   @Input() products: Product[] = [];
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    
+  }
 }
