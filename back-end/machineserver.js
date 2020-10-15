@@ -17,11 +17,15 @@ SerialPort.list().then(ports => {
 
 var five = require('johnny-five');
 var board = five.Board();
+
 board.on('ready', function () {
+
 var pubnub = require('pubnub').init({
 publish_key: 'YOUR_PUBLISH_KEY',
         subscribe_key: 'YOUR_SUBSCRIBE_KEY'
+        
 });
+
 var channel = 'hue-clone'; // same channel name used in client
 var led8;
 pubnub.subscribe({
@@ -30,6 +34,7 @@ callback: setLedColor,
 connect: initLedColor,
 error: function (err) { console.log(err); }
 });
+
 function setLedColor(receivedObj) {
 console.log("receivedObj :", receivedObj);
 if (receivedObj.led_status === 1) {
@@ -41,6 +46,7 @@ console.log("OFF");
 led8.off();
 }
 }
+
 function initLedColor() {
    led8 = new five.Led(8);
    led8.off();
