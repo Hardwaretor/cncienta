@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 import { AccountService } from '../_services';
 
+
 @Component({
   selector: 'app-machine-list',
   templateUrl: './machine-list.component.html',
@@ -11,6 +12,7 @@ import { AccountService } from '../_services';
 export class MachineListComponent implements OnInit {
 
   machines = null;
+  
 
   constructor(private accountService: AccountService) { }
 

@@ -34,6 +34,10 @@ export class IotComponent implements OnInit {
   ) 
 
   {}
-  ngOnInit() {}
+  ngOnInit() {
+
+
+    
+  }
 
 }

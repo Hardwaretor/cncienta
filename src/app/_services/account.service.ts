@@ -119,6 +119,7 @@ export class AccountService {
     }
 
     getAllproducts() {
+        
         return this.http.get<Product[]>(`${environment.apiUrl}/products`);
     }
 

@@ -14,7 +14,11 @@ export class AppComponent implements OnInit{
   user: User;
 
 
-  constructor(private authenticationService: AuthenticationService) {
+  constructor(
+    
+    private authenticationService: AuthenticationService)
+    
+    {
       this.authenticationService.user.subscribe(x => this.user = x);
   }
 

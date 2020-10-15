@@ -1,5 +1,4 @@
-{
-  "machines": [
+[
     {
       "user_id": 1,
       "url": "https//cncienta.com/ggalindo/machines",
@@ -34,4 +33,4 @@
     }
 
   ]
-}
+

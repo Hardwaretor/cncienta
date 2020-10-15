@@ -10,6 +10,7 @@ import { AccountService } from '../_services';
 export class DeviceListComponent implements OnInit {
 
   devices = null;
+  
 
   constructor(private accountService: AccountService) { }
 

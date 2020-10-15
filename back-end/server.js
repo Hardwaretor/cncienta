@@ -51,19 +51,19 @@ function isAuthenticated({ username, password, }) {
 ////////////////////////// Public db ///////////////////////////
 
 server.get('/products', (req, res) => {
-  res.status(200).json(products);
+  res.json(products);
 });
 
 server.get('/devices', (req, res) => {
-  res.status(200).json(devices);
+  res.json(devices);
 });
 
 server.get('/cams', (req, res) => {
-  res.status(200).json(cams);
+  res.json(cams);
 });
 
 server.get('/machines', (req, res) => {
-  res.status(200).json(machines);
+  res.json(machines);
 });
 
 ////////////////////////// Authenticate ///////////////////////////
