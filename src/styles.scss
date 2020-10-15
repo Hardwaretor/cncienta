@@ -61,9 +61,10 @@ h6 {
 .background {
 
     width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: -100;
     margin-left: -50%;
+    margin-top: -3%;
 
 }
 
