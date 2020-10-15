@@ -21,6 +21,8 @@ Install npm packages " npm install "
 
 Run Front-End Angular Server " ng serve "
 
+Run Front-End Angular Server on Production " ng serve --prod"
+
 Runt Back-End Nodejs Server " npm start" 
 
 <h2>Public db</h2>

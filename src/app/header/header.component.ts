@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Product } from '../product/product.component';
-import { User } from '../_models';
-import { AccountService } from '../_services';
 
 
 @Component({
