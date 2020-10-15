@@ -4,7 +4,7 @@ import { GetItems } from '../store/actions';
 import { Product } from '../product/product.component';
 import { first } from 'rxjs/operators';
 import { User } from '../_models';
-import { UserService } from '../_services';
+import { ProductsService } from '../_services';
 
 @Component({
   selector: 'app-home',
@@ -15,11 +15,12 @@ export class HomeComponent implements OnInit {
 
   loading = false;
   users: User[];
+  products: Product[];
 
   constructor(
-    private userService: UserService,
+    private productService: ProductsService,
     private store: Store<{ items: Product[]; cart: [] }>) {
-    store.pipe(select('shop')).subscribe(data => (this.items = data.items));
+    store.pipe(select('items')).subscribe(data => (this.items = data));
   }
 
   items: Product[] = [];
@@ -27,9 +28,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(new GetItems());
     this.loading = true;
-    this.userService.getAll().pipe(first()).subscribe(users => {
+    this.productService.getAll().pipe(first()).subscribe(products => {
         this.loading = false;
-        this.users = users;
+        this.products = products;
     });
   }
 }
