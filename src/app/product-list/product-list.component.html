@@ -1,11 +1,38 @@
 
-<head>
 
-  <meta name="Products List" content="Author: Guillermo Galindo,
-    Illustrator: Guillermo Galindo">
+    <table class="table table-striped" >
+      <thead>
+          <tr>
 
-</head>
+              <th class="product-details__name" style="width: 15%">Image</th>
+              <th class="product-details__name" style="width: 15%">Name</th>
+              <th class="product-details__price" style="width: 15%">Price</th>
+              <th class="product-description" style="width: 30%">Description</th>
 
-<div class="product-list">
-  <app-product *ngFor="let product of products" [product]="products"></app-product>
-</div>
+          </tr>
+      </thead>
+      <tbody class="product-image-holder">
+          <tr *ngFor="let product of products" >           
+              
+
+              <td><img src={{product.image}} [alt]="product.name" class="product-image"></td>
+              <td class="product-details__name">{{product.name}}</td>
+              <td class="product-details__price">{{product.price}}</td>
+              <td class="product-description" >{{product.description}}</td>
+
+              <td style="white-space: nowrap">
+                  <a routerLink="updateProduct/{{product.name}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+                  <button (click)="deleteProduct(product.name)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="product.isDeleting">
+                      <span *ngIf="product.isDeleting" class="spinner-border spinner-border-sm"></span>
+                      <span *ngIf="!product.isDeleting">Delete</span>
+                  </button>
+              </td>
+          </tr>
+          <tr *ngIf="!products">
+              <td colspan="4" class="text-center">
+                  <span class="spinner-border spinner-border-lg align-center"></span>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
