@@ -1,38 +1,32 @@
 
 
+
     <table class="table table-striped" >
-      <thead>
-          <tr>
-
-              <th class="product-details__name" style="width: 15%">Image</th>
-              <th class="product-details__name" style="width: 15%">Name</th>
-              <th class="product-details__price" style="width: 15%">Price</th>
-              <th class="product-description" style="width: 30%">Description</th>
-
-          </tr>
-      </thead>
-      <tbody class="product-image-holder">
+     
+      <tbody >
           <tr *ngFor="let product of products" >           
-              
 
               <td><img src={{product.image}} [alt]="product.name" class="product-image"></td>
-              <td class="product-details__name">{{product.name}}</td>
-              <td class="product-details__price">{{product.price}}</td>
-              <td class="product-description" >{{product.description}}</td>
+              <td class="row">{{product.name}}</td>
+              <td class="row">{{product.price}}</td>
+              <td class="row">{{product.description}}</td>
 
               <td style="white-space: nowrap">
-                  <a routerLink="updateProduct/{{product.name}}" class="btn btn-sm btn-primary mr-1">Edit</a>
-                  <button (click)="deleteProduct(product.name)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="product.isDeleting">
-                      <span *ngIf="product.isDeleting" class="spinner-border spinner-border-sm"></span>
-                      <span *ngIf="!product.isDeleting">Delete</span>
+
+                  <button (click)="addProduct(product.name)" class="btn btn-sm btn-primary btn-add-user" [disabled]="product.isAdded">
+                      <span *ngIf="product.isAdded" class="spinner-border spinner-border-sm"></span>
+                      <span *ngIf="!product.isAdded">Add to Cart</span>
                   </button>
               </td>
+          
           </tr>
+
           <tr *ngIf="!products">
               <td colspan="4" class="text-center">
                   <span class="spinner-border spinner-border-lg align-center"></span>
               </td>
-          </tr>
+
       </tbody>
+  
   </table>
 

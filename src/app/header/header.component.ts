@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { select, Store } from '@ngrx/store';
-import { Product } from '../product/product.component';
 
 
 @Component({
@@ -10,14 +8,10 @@ import { Product } from '../product/product.component';
 })
 export class HeaderComponent implements OnInit {
 
-  cart: Product[] = [];
   
   constructor(
-
-    private store: Store<{ items: []; cart: [] }>) {
-    store.pipe(select('items')).subscribe(data => (this.cart = data));
+) {
   }
  
-
   ngOnInit() {}
 }

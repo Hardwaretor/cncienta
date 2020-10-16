@@ -87,3 +87,22 @@
     }
   }
 }
+
+.table {
+  width: 100%;
+  color: #212529;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.453);
+  margin: 1%;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(197, 197, 197, 0.453);
+  margin: 1%;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
