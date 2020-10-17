@@ -10,6 +10,7 @@ import { Product } from '../_models';
 import { Machine } from '../_models';
 import { Device } from '../_models';
 import { Cam } from '../_models';
+import { Cart } from '../_models';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {
@@ -30,6 +31,9 @@ export class AccountService {
     public cam: Observable<Cam>;
 
 
+    private cartSubject: BehaviorSubject<Cart>;
+    public cart: Observable<Cart>;
+
     constructor(
         private router: Router,
         private http: HttpClient
@@ -48,7 +52,10 @@ export class AccountService {
         this.device = this.deviceSubject.asObservable();
 
         this.camSubject = new BehaviorSubject<Cam>(JSON.parse(localStorage.getItem('cam')));
-        this.cam = this.deviceSubject.asObservable();
+        this.cam = this.camSubject.asObservable();
+
+        this.cartSubject = new BehaviorSubject<Cart>(JSON.parse(localStorage.getItem('cart')));
+        this.cart = this.cartSubject.asObservable();
 
 
     }
@@ -70,7 +77,11 @@ export class AccountService {
     }
 
     public get camValue(): Cam {
-        return this.deviceSubject.value;
+        return this.camSubject.value;
+    }
+
+    public get cartValue(): Cart {
+        return this.cartSubject.value;
     }
     
 
@@ -121,6 +132,14 @@ export class AccountService {
     getAllproducts() {
         
         return this.http.get<Product[]>(`${environment.apiUrl}/products`);
+    }
+
+    getAllcart() {
+        
+
+        let cart = localStorage.getItem('cart'); 
+        return  this.cart ;
+         
     }
 
     getById(id: string) {
