@@ -9,7 +9,7 @@ export class MachineComponent implements OnInit {
 
   gaugeType = "semi";
   gaugeForm = "thick";
-  gaugeValue =100;
+  gaugeValue =75;
   gaugeLabel1 = "Cut Speed";
   gaugeAppendText1 = "m/mn";
   gaugeLabel2 = "Head Temp";
