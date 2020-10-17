@@ -1,6 +1,5 @@
 
 const bodyParser = require('body-parser');
-
 const fs = require('fs')
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
@@ -16,6 +15,9 @@ const products = require('./db/products.json');
 const machines = require('./db/machines.json');
 const devices = require('./db/devices.json');
 const cams = require('./db/cams.json');
+const users = require('./db/users.json');
+
+
 
 server.use(bodyParser.json())
 server.use(jsonServer.defaults());
@@ -77,10 +79,7 @@ server.post('/users/authenticate', (req, res) => {
   console.log("Access Token:" + access_token);
 
   const user = userdb.users.find(u => u.username === username && u.password === password);
-  const machines = machinesdb.machines.filter(x => x.user_id === user.id );
-  const devices = devicesdb.devices.filter(x => x.user_id === user.id);
-  const cams = camsdb.cams.filter(x => x.user_id === user.id);
-  const products = productsdb.products.filter(x => x.user_id === user.id);
+
 
 
   if (isAuthenticated({ username, password }) === false) {
@@ -93,7 +92,7 @@ server.post('/users/authenticate', (req, res) => {
 
   if (isAuthenticated({ username, password }) === true) {
     const { password, ...userWithoutPassword } = user;
-    res.status(200).json({access_token,machines,cams,products,devices, ...userWithoutPassword })
+    res.status(200).json({access_token, ...userWithoutPassword })
   }
 
 })

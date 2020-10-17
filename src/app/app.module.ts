@@ -37,7 +37,8 @@ import { DeviceComponent } from './device/device.component';
 import { NgxGaugeModule } from 'ngx-gauge';
 
 import { FormsModule } from '@angular/forms';
-import { FilterPipe } from './filter.pipe';
+
+import { CheckoutListComponent } from './checkout-list/checkout-list.component';
 
 
 @NgModule({
@@ -59,7 +60,7 @@ import { FilterPipe } from './filter.pipe';
     CamListComponent,
     CameraComponent,
     DeviceComponent,
-    FilterPipe
+    CheckoutListComponent
     
     
 

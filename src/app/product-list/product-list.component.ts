@@ -14,7 +14,24 @@ export class ProductListComponent implements OnInit {
   products = null;
   
 
+  addToCart(name: string,image:string, price:number ){
+
+    var oldProducts = JSON.parse(localStorage.getItem('cart')) || [];
+
+    var newProduct = {
+        'product-name': name,
+        'product-image': image,
+        'product-price': price
+};
+
+oldProducts.push(newProduct);
+
+localStorage.setItem('cart', JSON.stringify(oldProducts));
+}
+
   constructor(private accountService: AccountService) { 
+
+    
     
   }
 
