@@ -4,3 +4,38 @@
     Illustrator: Guillermo Galindo">
 
 </head>
+
+<div class="row">
+  <div class="col-8">
+
+    <div class="iotlogin-card">
+      <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Products</h1>
+      <button [disabled]="" class="btn btn-primary">
+        <span *ngIf="" class="spinner-border spinner-border-sm mr-1"></span>
+        Back to shop
+    </button>
+      
+      <div class="card-body">
+
+        <app-checkout-list></app-checkout-list>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-4">
+
+             <div class="iotlogin-card">
+      <h1 class="card-header" style=" color: rgb(0, 0, 0); ">Payment</h1>
+      <div class="card-body">
+
+        <app-payment></app-payment>
+
+        </div>
+
+      </div>
+    </div>
+
+
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cart } from '../_models';
+import { AccountService } from '../_services';
 
 @Component({
   selector: 'app-checkout-list',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutListComponent implements OnInit {
 
-  constructor() { }
+  cart = null;
+  
+  constructor(
+
+    private accountService: AccountService
+
+  ) { 
+
+let cart = localStorage.getItem('cart'); 
+alert(`Hello ${ cart }!`);
+
+
+  }
 
   ngOnInit(): void {
   }
 
+  
 }

@@ -39,6 +39,7 @@ import { NgxGaugeModule } from 'ngx-gauge';
 import { FormsModule } from '@angular/forms';
 
 import { CheckoutListComponent } from './checkout-list/checkout-list.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { CheckoutListComponent } from './checkout-list/checkout-list.component';
     CamListComponent,
     CameraComponent,
     DeviceComponent,
-    CheckoutListComponent
+    CheckoutListComponent,
+    PaymentComponent
     
     
 

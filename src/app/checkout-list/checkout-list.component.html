@@ -1,1 +1,31 @@
-<p>checkout-list works!</p>
+<table class="table table-striped" >
+     
+    <tbody >
+        <tr *ngFor="let cart of cart">           
+
+            <td><img src={{cart.image}} [alt]="cart.name" class="cart-image"></td>
+            <td class="row">{{cart.name}}</td>
+            <td class="row">{{cart.price}}</td>
+            <td class="row">{{cart.description}}</td>
+
+            <td style="white-space: nowrap; vertical-align: bottom; float: right!important; ">
+              <button
+              class="cart-actions__add"
+              (click)="addToCart(cart)"
+              *ngIf="!inCart"
+            >
+              <img src="/assets/logos/addcart.png" alt="add to cart" />
+            </button>
+            </td>
+        
+        </tr>
+
+        <tr *ngIf="!cart">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+
+    </tbody>
+
+</table>
+  

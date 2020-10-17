@@ -14,12 +14,12 @@ export class ProductListComponent implements OnInit {
   products = null;
   
 
-  addToCart(item: string ){
+  addToCart(cart: string ){
 
     var oldProducts = JSON.parse(localStorage.getItem('cart')) || [];
 
     var newProduct = {
-        item,
+        cart
 };
 
 oldProducts.push(newProduct);

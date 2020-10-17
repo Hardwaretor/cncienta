@@ -4,3 +4,4 @@ export * from './product';
 export * from './machine';
 export * from './device';
 export * from './cam';
+export * from './cart';
