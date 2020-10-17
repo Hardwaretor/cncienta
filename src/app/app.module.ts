@@ -36,6 +36,10 @@ import { DeviceComponent } from './device/device.component';
 
 import { NgxGaugeModule } from 'ngx-gauge';
 
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +58,9 @@ import { NgxGaugeModule } from 'ngx-gauge';
     DeviceListComponent,
     CamListComponent,
     CameraComponent,
-    DeviceComponent
+    DeviceComponent,
+    FilterPipe
+    
     
 
   ],
@@ -68,7 +74,8 @@ import { NgxGaugeModule } from 'ngx-gauge';
     AppRoutingModule,
     WebcamModule,
     ReactiveFormsModule,
-    NgxGaugeModule
+    NgxGaugeModule,
+    FormsModule
 
 
   ],

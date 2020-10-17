@@ -91,8 +91,24 @@
   </div>
  </section>
 
-
  <section class="product-area">
+
+  <div class="content" role="main">
+    <div class="card">
+      <div class="form-group">
+
+        <input type="email" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="Enter category" 
+          autofocus>
+      </div>
+      <ul class="list-group list-group-flush">
+        <!-- results of ngFor is passed to appFilter with argument searchText -->
+        <li class="list-group-item" *ngFor="let product of products | appFilter: searchText">
+          {{c}}
+        </li>
+      </ul>
+    </div>
+  </div>
 
    <app-product-list></app-product-list>
 

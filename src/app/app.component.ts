@@ -12,7 +12,18 @@ import { AuthenticationService } from './_services';
 export class AppComponent implements OnInit{
 
   user: User;
-  
+  title = 'angular-text-search-highlight';
+  searchText = '';
+  characters = [
+    'Table',
+    'Lamp',
+    'Hand',
+    'Guitar',
+    'Chair',
+    'Machine',
+    '3DPrinter',
+    'Material'
+  ]
 
   constructor(
     
