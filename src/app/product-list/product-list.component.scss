@@ -4,27 +4,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
+  background-color: transparent;
 
   &:hover {
     transform: scale(1.1);
+    
   }
 
   img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 
 .product {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  margin: 0 30px 30px 0;
-  width: 300px;
-  max-height: 400px;
-  height: 320px;
+  margin: 1%;
+  border-color: black;
+  border-width: 2px;
+
+
 
   &:hover {
     transform: scale(1.05);
@@ -37,12 +40,13 @@
 
   &-image {
     max-width: 100%;
-    width: 300px;
+    width: 100%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    height: 180px;
+    height: 300px;
     object-fit: cover;
   }
+  
   &-details {
     display: flex;
     justify-content: space-between;
@@ -92,17 +96,32 @@
   width: 100%;
   color: #212529;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.453);
-  margin: 1%;
+  font-size: xx-large;
+  background-color: rgba(255, 255, 255, 0.652);
+  margin-top: 3%;
+  margin-bottom: 3%;
+
 }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(197, 197, 197, 0.453);
-  margin: 1%;
+  background-color: rgba(197, 197, 197, 0.679);
+ 
 }
 
 tr {
-  display: table-row;
+  
   vertical-align: inherit;
-  border-color: inherit;
+  border-color: black;
+  float: left!important; 
+  width: 25%!important;
+
 }
+
+.table td, .table th {
+  padding: 1%;
+  vertical-align: top;
+  margin: 1%;
+  border-top: 1px solid #000000;
+
+}
+

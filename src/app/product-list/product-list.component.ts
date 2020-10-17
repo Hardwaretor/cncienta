@@ -14,7 +14,9 @@ export class ProductListComponent implements OnInit {
   products = null;
   
 
-  constructor(private accountService: AccountService) { }
+  constructor(private accountService: AccountService) { 
+    
+  }
 
 
   ngOnInit() {

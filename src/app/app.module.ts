@@ -35,6 +35,7 @@ import {GaugesModule} from 'ng-canvas-gauges';
 import { MachineComponent } from './machine/machine.component';
 import { DeviceComponent } from './device/device.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { DeviceComponent } from './device/device.component';
     CamListComponent,
     CameraComponent,
     DeviceComponent
+
   ],
 
 

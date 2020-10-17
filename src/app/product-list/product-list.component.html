@@ -1,22 +1,23 @@
 
 
-
     <table class="table table-striped" >
      
       <tbody >
-          <tr *ngFor="let product of products" >           
+          <tr *ngFor="let product of products">           
 
               <td><img src={{product.image}} [alt]="product.name" class="product-image"></td>
               <td class="row">{{product.name}}</td>
               <td class="row">{{product.price}}</td>
               <td class="row">{{product.description}}</td>
 
-              <td style="white-space: nowrap">
-
-                  <button (click)="addProduct(product.name)" class="btn btn-sm btn-primary btn-add-user" [disabled]="product.isAdded">
-                      <span *ngIf="product.isAdded" class="spinner-border spinner-border-sm"></span>
-                      <span *ngIf="!product.isAdded">Add to Cart</span>
-                  </button>
+              <td style="white-space: nowrap; vertical-align: bottom; float: right!important; ">
+                <button
+                class="product-actions__add"
+                (click)="addToCart(product)"
+                *ngIf="!inCart"
+              >
+                <img src="/assets/logos/addcart.png" alt="add to cart" />
+              </button>
               </td>
           
           </tr>
