@@ -12,7 +12,7 @@ import { AuthenticationService } from './_services';
 export class AppComponent implements OnInit{
 
   user: User;
-
+  
 
   constructor(
     

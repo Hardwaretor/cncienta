@@ -31,10 +31,10 @@ import { CamListComponent } from './cam-list/cam-list.component';
 import {WebcamModule} from 'ngx-webcam';
 import { CameraComponent } from './camera/camera.component';
 
-import {GaugesModule} from 'ng-canvas-gauges';
 import { MachineComponent } from './machine/machine.component';
 import { DeviceComponent } from './device/device.component';
 
+import { NgxGaugeModule } from 'ngx-gauge';
 
 @NgModule({
   declarations: [
@@ -55,6 +55,7 @@ import { DeviceComponent } from './device/device.component';
     CamListComponent,
     CameraComponent,
     DeviceComponent
+    
 
   ],
 
@@ -66,8 +67,8 @@ import { DeviceComponent } from './device/device.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     WebcamModule,
-    GaugesModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxGaugeModule
 
 
   ],

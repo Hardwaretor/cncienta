@@ -2,7 +2,7 @@
 <div class="container">
 
   <div class="row"> 
-    <div class="col-4"> 
+    <div class="col-3"> 
 
       <section class="preference">
          <h3>Light</h3>
@@ -46,7 +46,7 @@
 
 </div>
 
-<div class="col-4">
+<div class="col-3">
 
   <section class="preference">
     <div>
@@ -57,12 +57,12 @@
     </div>
   </section>
 
-  <section class="preference" >
+  <section class="preference" style="margin-top: 20%;">
     <div>
-       <button class="btn btn-default" onclick="moveplus(1)"><img src="../../assets/logos/Up.png" width="140" /></button>
-       <button class="btn btn-default" onclick="moveless(1)"><img src="../../assets/logos/Down.png" width="140" /></button>
+       <button class="btn btn-default" onclick="moveplus(1)"><img src="../../assets/logos/Up.png" width="100px" /></button>
+       <button class="btn btn-default" onclick="moveless(1)"><img src="../../assets/logos/Down.png" width="100px" /></button>
        
-       <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Speed meters/minute">
+       <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Speed meters/minute" style="margin-top: 10%;">
 
     </div>
   </section>
@@ -71,37 +71,66 @@
 
 
 
-<div class="col-4">
-  <div style="margin: 2%;">
-  <canvas data-type="radial-gauge"
-  width="180" 
-  height="180"
-  data-major-ticks="0,20,40,60,80,100"
-  data-highlights='[
-      { "from": 0, "to": 20, "color": "rgba(0,255,0,.15)" },
-      { "from": 20, "to": 40, "color": "#20c997" },
-      { "from": 40, "to": 60, "color": "#28a745" },
-      { "from": 60, "to": 80, "color": "#ffc107" },
-      { "from": 80, "to": 100, "color": "#dc3545" }
-  ]'
-></canvas>
-</div>
+<div class="col-3">
+  <div style="margin-top: 10%; height: 80px;">
 
-<div style="margin: 2%;">
-<canvas data-type="radial-gauge"
-width="180" 
-height="180"
-data-major-ticks="0,20,40,60,80,100"
-data-highlights='[
-    { "from": 0, "to": 20, "color": "rgba(0,255,0,.15)" },
-    { "from": 20, "to": 40, "color": "#20c997" },
-    { "from": 40, "to": 60, "color": "#28a745" },
-    { "from": 60, "to": 80, "color": "#ffc107" },
-    { "from": 80, "to": 100, "color": "#dc3545" }
-]'
-></canvas>
+    <ngx-gauge [type]="gaugeType"
+           [form]="gaugeForm"  
+           [value]="gaugeValue" 
+           [label]="gaugeLabel1"
+           [append]="gaugeAppendText1"
+           [thresholds]="thresholdConfig"
+           >
+</ngx-gauge>
+
 </div>
 
 
+<div style="margin-top: 40%; height: 80px;">
+  
+  <ngx-gauge [type]="gaugeType"
+  [form]="gaugeForm"  
+  [value]="gaugeValue" 
+  [label]="gaugeLabel3"
+  [append]="gaugeAppendText3"
+  [thresholds]="thresholdConfig"
+  >
+</ngx-gauge>
+
 </div>
+
+</div>
+
+
+<div class="col-3">
+  <div style="margin-top: 10%; height: 80px;">
+
+    <ngx-gauge [type]="gaugeType"
+           [form]="gaugeForm"
+           [value]="gaugeValue" 
+           [label]="gaugeLabel4"
+           [append]="gaugeAppendText4"
+           [thresholds]="thresholdConfig"
+           >
+</ngx-gauge>
+
+</div>
+
+<div style="margin-top: 40%; height: 80px;">
+
+  <ngx-gauge [type]="gaugeType"
+  [form]="gaugeForm"
+  [value]="gaugeValue" 
+  [label]="gaugeLabel2"
+  [append]="gaugeAppendText2"
+  [thresholds]="thresholdConfig"
+  >
+</ngx-gauge>
+
+</div>
+
+
+</div>
+
+
 </div>
