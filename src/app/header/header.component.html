@@ -40,9 +40,12 @@
         </li>
         <li class="nav-item" style=" background-color: black; border-radius: 50%; margin-top: 0.5%;">
           <a href="./checkout"><img src="/assets/logos/addcart.png" alt="cart" style=" width: 50px; "></a>
-          <span class="badge" *ngIf="cart.length > 0">{{ cart.length }}</span>
-
         </li>
+
+        <li class="nav-item">
+          <span class="badge" *ngIf="counter > 0">{{ counter }}</span>
+        </li>
+        
 
       </ul>
 

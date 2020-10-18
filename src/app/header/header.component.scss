@@ -49,9 +49,9 @@ header {
       }
 
       .badge {
-        height: 30px;
-        width: 30px;
-        font-size: 20px;
+        height: 40px;
+        width: 40px;
+        font-size: 30px;
         color: white;
         background-color: #000000;
         display: flex;
@@ -60,7 +60,7 @@ header {
         align-items: center;
         position: absolute;
         top: 10px;
-        right: 2px;
+        right: 0px;
         border-radius: 50%;
       }
     }

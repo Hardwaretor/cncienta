@@ -11,6 +11,7 @@ import { Machine } from '../_models';
 import { Device } from '../_models';
 import { Cam } from '../_models';
 import { Cart } from '../_models';
+import { Counter } from '../_models';
 
 @Injectable({ providedIn: 'root' })
 export class AccountService {
@@ -34,6 +35,9 @@ export class AccountService {
     private cartSubject: BehaviorSubject<Cart>;
     public cart: Observable<Cart>;
 
+    private counterSubject: BehaviorSubject<Counter>;
+    public counter: Observable<Counter>;
+
     constructor(
         private router: Router,
         private http: HttpClient
@@ -56,6 +60,9 @@ export class AccountService {
 
         this.cartSubject = new BehaviorSubject<Cart>(JSON.parse(localStorage.getItem('cart')));
         this.cart = this.cartSubject.asObservable();
+
+        this.counterSubject = new BehaviorSubject<Counter>(JSON.parse(localStorage.getItem('counter')));
+        this.counter = this.counterSubject.asObservable();
 
 
     }
@@ -82,6 +89,10 @@ export class AccountService {
 
     public get cartValue(): Cart {
         return this.cartSubject.value;
+    }
+
+    public get counterValue(): Counter {
+        return this.counterSubject.value;
     }
     
 
