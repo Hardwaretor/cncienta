@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 import { AccountService } from '../_services';
+import { Product } from '../_models'
 
 
 @Component({
@@ -12,19 +13,25 @@ import { AccountService } from '../_services';
 export class ProductListComponent implements OnInit {
 
   products = null;
-  
+  inCart = false;
+
+  @Input() product: Product;
 
   addToCart(cart: string ){
 
     var oldProducts = JSON.parse(localStorage.getItem('cart')) || [];
+    var newProduct = {cart};
+    oldProducts.push(newProduct);
+    localStorage.setItem('cart', JSON.stringify(oldProducts));
 
-    var newProduct = {
-        cart
-};
 
-oldProducts.push(newProduct);
+}
 
-localStorage.setItem('cart', JSON.stringify(oldProducts));
+  removeToCart(cart: string ){
+
+  localStorage.removeItem('cart');
+  this.inCart = false;
+
 }
 
   constructor(private accountService: AccountService) { 

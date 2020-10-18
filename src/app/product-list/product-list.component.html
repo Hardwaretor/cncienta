@@ -10,7 +10,16 @@
               <td class="row">{{product.price}}</td>
               <td class="row">{{product.description}}</td>
 
-              <td style="white-space: nowrap; vertical-align: bottom; float: right!important; ">
+              <div class="row" style="white-space: nowrap; vertical-align: bottom; float: right!important; margin: 5%;">
+
+                <button
+                class="product-actions__remove"
+                (click)="removeToCart(product)"
+                *ngIf="!inCart"
+              >
+                <img src="/assets/logos/addcart.png" alt="remove to cart" />
+              </button>
+
                 <button
                 class="product-actions__add"
                 (click)="addToCart(product)"
@@ -18,7 +27,9 @@
               >
                 <img src="/assets/logos/addcart.png" alt="add to cart" />
               </button>
-              </td>
+
+
+          </div>
           
           </tr>
 

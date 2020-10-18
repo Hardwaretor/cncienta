@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
-  background-color: black;
+  
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     
   }
 
@@ -33,7 +33,8 @@
 
   &:hover {
     transform: scale(1.05);
-    border: 1px solid #000000;
+    border:  #00000000;
+    background-color: transparent;
 
     .product-actions {
       display: flex;
@@ -43,7 +44,7 @@
   &-image {
     max-width: 100%;
     width: 100%;
-    border-top-right-radius: 5px;
+    border-top-right-radius: 50%;
     border-top-left-radius: 5px;
     height: 300px;
     object-fit: cover;
@@ -81,15 +82,23 @@
     display: none;
     justify-content: flex-end;
     padding: 0 15px;
+    margin: 1%;
+
 
     &__add {
       @extend %button;
-      border: 2px solid rgb(0, 0, 0);
+      border: 2px solid rgba(0, 0, 0, 0);
+      background-color: black;
+      border-radius: 50%;
+
     }
 
     &__remove {
       @extend %button;
-      border: 2px solid indianred;
+      border: 2px solid rgba(0, 0, 0, 0);
+      background-color: rgb(241, 69, 69);
+      border-radius: 50%;
+
     }
   }
 }
