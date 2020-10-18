@@ -103,75 +103,6 @@ header[_ngcontent-c1] {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0);
 }
 
-.bg-light {
-    background-color: #f8f9fa00!important;
-}
-
-header[_ngcontent-c1] ul[_ngcontent-c1] li[_ngcontent-c1] img[_ngcontent-c1] {
-    width: 100px !important;
-    padding-left: 50% !important;
-}
-
-.logocart {
-
-    width: 20% !important;
-
-}
-
-a {
-    color: #000000;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.navbar-dark .navbar-brand {
-    color: rgb(0, 0, 0);
-}
-
-.navbar-nav {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-.navbar {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 0rem 0rem;
-    width: 100%;
-}
-
-nav-link {
-    display: block;
-    padding: .5rem 1rem;
-}
-
-.navbar-light .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
-}
-
-
-.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-    color: rgb(0, 0, 0);
-    align-items: center;
-    vertical-align: middle;
-   
-}
 
 li {
     display: list-item;
@@ -196,12 +127,13 @@ li {
     margin-left: 3px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: rgb(100, 100, 100);
+    background-color: rgba(255, 255, 255, 0.898);
     background-clip: padding-box;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     opacity: .5;
     transition: opacity .6s ease;
+  
 }
 
 .carousel-control-next, .carousel-control-prev {
@@ -238,26 +170,18 @@ li {
     
 }
 
-.product-image[_ngcontent-grs-c5] {
-    max-width: 300px;
-    width: 300px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    height: 180px;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
 
 .carousel {
     position: relative;
     padding-top: 1%;
     padding-bottom: 1%;
-    height: 50% !important;
+    height: 35% !important;
 
 }
 
 .w-100 {
-    width: 100%!important;
+    width: 70%!important;
+    margin-left: 35%;
 }
 
 main[_ngcontent-c2] {
