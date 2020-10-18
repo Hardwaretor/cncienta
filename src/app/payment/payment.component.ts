@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../_models';
+import { AccountService } from '../_services';
 
 @Component({
   selector: 'app-payment',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
 
-  constructor() { }
+  user: User;
+
+  constructor(
+
+    private accountService: AccountService) {
+
+      this.user = this.accountService.userValue;
+
+     }
 
   ngOnInit(): void {
   }

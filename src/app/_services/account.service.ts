@@ -134,14 +134,6 @@ export class AccountService {
         return this.http.get<Product[]>(`${environment.apiUrl}/products`);
     }
 
-    getAllcart() {
-        
-
-        let cart = localStorage.getItem('cart'); 
-        return  this.cart ;
-         
-    }
-
     getById(id: string) {
         return this.http.get<User>(`${environment.apiUrl}/users/${id}`);
     }

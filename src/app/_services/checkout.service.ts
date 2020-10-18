@@ -1,20 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { environment } from '../../environments/environment';
 import { Cart } from '../_models';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class CheckoutService {
-  constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
-  cart = null;
-
-  getAllcart() {
-        
-    let cart = localStorage.getItem('cart'); 
-    return  this.cart ;
-    
-}
+    getAll() {
+      
+        return this.http.get<Cart[]>(`${environment.apiUrl}/cart`);
+    }
 }

@@ -20,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
-import { CheckoutComponent } from './checkout/checkout.component';
+
 
 import { IotComponent } from './iot/iot.component';
 import { FooterComponent } from './footer/footer.component';
@@ -30,14 +30,12 @@ import { CamListComponent } from './cam-list/cam-list.component';
 
 import {WebcamModule} from 'ngx-webcam';
 import { CameraComponent } from './camera/camera.component';
-
 import { MachineComponent } from './machine/machine.component';
 import { DeviceComponent } from './device/device.component';
-
 import { NgxGaugeModule } from 'ngx-gauge';
 
 import { FormsModule } from '@angular/forms';
-
+import { CheckoutComponent } from './checkout/checkout.component';
 import { CheckoutListComponent } from './checkout-list/checkout-list.component';
 import { PaymentComponent } from './payment/payment.component';
 

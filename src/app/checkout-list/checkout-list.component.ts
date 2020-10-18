@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Cart } from '../_models';
 import { AccountService } from '../_services';
-import { first } from 'rxjs/operators';
+import { CheckoutService } from '../_services';
 
 @Component({
   selector: 'app-checkout-list',
@@ -9,23 +10,23 @@ import { first } from 'rxjs/operators';
 })
 export class CheckoutListComponent implements OnInit {
 
-  carts = null;
-  
+  cart: Cart;
+  loading = false;
 
+  
   constructor(
 
-    private accountService: AccountService
+    private accountService: AccountService,
+    private checkoutService: CheckoutService,
 
   ) { 
 
+    this.cart = this.accountService.cartValue;
 
   }
 
   ngOnInit(): void {
 
-    this.accountService.getAllcart()
-    .pipe(first())
-    .subscribe(carts => this.carts = carts);
   }
   }
 
