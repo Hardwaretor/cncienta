@@ -26,6 +26,7 @@ export class HeaderComponent implements OnInit {
   
   this.counter = this.accountService.counterValue;
 
+
   }
  
   ngOnInit() {
