@@ -33,20 +33,27 @@
           <a class="nav-link" href="./about" >AboutUs</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="./register" >SingUp</a>
-        </li>
-        <li class="nav-item ">
           <a class="nav-link" href="./login" >Login</a>
         </li>
         <li class="nav-item">
           <a href="./checkout"><img class="img2" src="/assets/logos/addcartheader.png" alt="cart"></a>
         </li>
-
         <li class="nav-item">
           <span class="badge" *ngIf="counter > 0 " >{{ counter }}</span>
         </li>
-        
 
+        <li>
+        <div class="col-user">
+
+          <h4>{{user.username}}</h4>
+          <h6>{{user.web}}</h6>
+          <h6>{{user.country}}</h6>
+          <h6>{{user.email}}</h6>
+          
+        </div>
+      </li>
+
+        
       </ul>
 
     </div>
