@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node ./back-end/server & node ./back-end/machineserver",
+    "start": "node ./back-end/server & node ./back-end/machineserver  ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
     "angular2-cookie-law": "^7.0.1",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
     "core-js": "^3.6.5",
     "cors": "^2.8.4",
     "express": "^4.16.3",

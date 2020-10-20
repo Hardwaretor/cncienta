@@ -1,0 +1,78 @@
+
+
+<head>
+  
+
+    <meta name="Loading" content="Author: Guillermo Galindo,
+      Illustrator: Guillermo Galindo">
+  <meta charset="utf-8">
+  <title>CNCienta</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/logos/LOGO corona negra ingles psyco.svg" type="image/x-icon" alt="logobroeser">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+  <script>
+    var brightness = { led_status: 0, r: 0, g: 0 };
+    var channel = 'hue-clone';
+    var pubnub = PUBNUB.init({
+        publish_key: '5920e1bc-25a0-4d7b-af77-d02ae504eed1',
+        subscribe_key: '7dd3a0ec-b2da-43c3-8d35-0672bf25e874'
+});
+
+var brightness = { led_status: 0, r: 0, g: 0 };
+
+function publishUpdate(data) {
+    console.log("data :", data);
+    pubnub.publish({
+    channel: channel,
+    message: data
+  });
+ }
+(function () {
+  pubnub.subscribe({
+      channel: channel,
+      message: resetSliders,
+      connect: initSliders 
+   });
+function resetSliders(m) {
+     brightness.r = m.r;
+  }
+function initSliders() {
+   pubnub.history({
+   channel: channel,
+   count: 1,
+   callback: function (messages) {
+       messages[0].forEach(function (m) {
+       console.log(m);
+       resetSliders(m);
+   });
+  }
+ });
+}
+})();
+var toggle = function (value) {
+    console.log("STATUS : ", value);
+    brightness.led_status = value;
+    publishUpdate(brightness);
+}
+  </script>
+</head>
+
+<!doctype html>
+<html lang="en">
+
+<body>
+
+<app-root>
+  <img class= "backgroundinicio" src="assets/backgrounds/wireframe.jpg" alt="background"></img>
+  <img class="logoinicio" src="assets/logos/LOGO simple psyco.svg" alt="logoinicio"></img>
+</app-root>
+
+<script src="runtime.js" defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills.js" defer></script><script src="styles.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
+
+</html>
