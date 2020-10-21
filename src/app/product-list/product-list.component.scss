@@ -7,17 +7,20 @@
   height: 30px;
   width: 30px;
   cursor: pointer;
+  border-radius: 50% !important;
 
   
 
   &:hover {
     transform: scale(1.5);
+    border-radius: 50% !important;
     
   }
 
   img {
     width: 20px;
     height: 20px;
+    
 
   }
 }
@@ -35,6 +38,7 @@
     transform: scale(1.05);
     border:  #00000000;
     background-color: transparent;
+    border-radius: 50% !important;
 
     .product-actions {
       display: flex;
@@ -83,13 +87,14 @@
     justify-content: flex-end;
     padding: 0 15px;
     margin: 1%;
+    border-radius: 50% !important;
 
 
     &__add {
       @extend %button;
       border: 2px solid rgba(0, 0, 0, 0);
       background-color: black;
-      border-radius: 50%;
+      border-radius: 50% !important;
 
     }
 
@@ -97,7 +102,7 @@
       @extend %button;
       border: 2px solid rgba(0, 0, 0, 0);
       background-color: rgb(241, 69, 69);
-      border-radius: 50%;
+      border-radius: 50% !important;
 
     }
   }
