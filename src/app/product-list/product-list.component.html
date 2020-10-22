@@ -1,44 +1,5 @@
 
 
-    <table class="table table-striped" >
-     
-      <tbody >
-          <tr *ngFor="let product of products">           
-
-              <td><img src={{product.image}} [alt]="product.name" class="product-image"></td>
-              <td class="row">{{product.name}}</td>
-              <td class="row">{{product.price}}</td>
-              <td class="row">{{product.description}}</td>
-
-              <div class="row" style="white-space: nowrap; vertical-align: bottom; float: right!important; margin: 5%;">
-
-                <button
-                class="product-actions__remove"
-                (click)="removeToCart(product)"
-                *ngIf="!inCart"
-              >
-                <img src="/assets/logos/addcart.png" alt="remove to cart" />
-              </button>
-
-                <button
-                class="product-actions__add"
-                (click)="addToCart(product)"
-                *ngIf="!inCart"
-              >
-                <img src="/assets/logos/addcart.png" alt="add to cart" />
-              </button>
-
-
-          </div>
-          
-          </tr>
-
-          <tr *ngIf="!products">
-              <td colspan="4" class="text-center">
-                  <span class="spinner-border spinner-border-lg align-center"></span>
-              </td>
-
-      </tbody>
-  
-  </table>
-
+<div class="row" >
+  <app-product style="width: 13.88%; margin: 0.2%;" *ngFor="let product of products" [product]="product"></app-product>
+</div>

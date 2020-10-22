@@ -1,0 +1,39 @@
+
+
+
+<table class="table table-striped" >
+     
+    <tbody >
+        <tr>           
+
+            <td><img src={{product.image}} [alt]="product.name" class="product-image"></td>
+
+            <button
+            class="product-actions__add"
+            (click)="addToCart(product)"
+            *ngIf="!inCart"
+          >
+            <img src="/assets/logos/addcart.png" alt="add to cart" />
+          </button>
+          <button
+            class="product-actions__remove"
+            (click)="removeFromCart(product)"
+            *ngIf="inCart"
+          >
+            <img src="/assets/logos/addcart.png" alt="remove from cart" />
+          </button>
+
+            <td class="row">{{product.name}}</td>
+            <td class="row">{{product.price}}</td>
+            <td class="row">{{product.description}}</td>
+
+        </tr>
+
+        <tr *ngIf="!products">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+
+    </tbody>
+
+</table>

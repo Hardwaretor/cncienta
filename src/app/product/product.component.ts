@@ -8,12 +8,12 @@ import { AddToCart, RemoveFromCart } from '../store/actions';
 
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss']
 })
 
-export class ProductListComponent implements OnInit {
+export class ProductComponent implements OnInit {
 
   constructor(
     
@@ -44,5 +44,6 @@ export class ProductListComponent implements OnInit {
     .pipe(first())
     .subscribe(products => this.products = products);
   }
+
 
 }

@@ -39,6 +39,10 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { CheckoutListComponent } from './checkout-list/checkout-list.component';
 import { PaymentComponent } from './payment/payment.component';
 
+import { StoreModule } from '@ngrx/store';
+import { ShopReducer } from './store/reducer';
+import { ProductComponent } from './product/product.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +64,8 @@ import { PaymentComponent } from './payment/payment.component';
     CameraComponent,
     DeviceComponent,
     CheckoutListComponent,
-    PaymentComponent
+    PaymentComponent,
+    ProductComponent
     
     
 
@@ -76,7 +81,8 @@ import { PaymentComponent } from './payment/payment.component';
     WebcamModule,
     ReactiveFormsModule,
     NgxGaugeModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({ shop: ShopReducer })
 
 
   ],
