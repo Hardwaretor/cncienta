@@ -18,6 +18,7 @@ export function ShopReducer(state = initialState, action: ActionsUnion) {
       return {
         ...state,
         cart: [...state.cart, action.payload]
+        
       };
 
     case ActionTypes.Remove:

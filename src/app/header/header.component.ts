@@ -1,5 +1,4 @@
 import { Component, OnInit, } from '@angular/core';
-import { Counter } from '../_models';
 import { AccountService } from '../_services';
 import { User } from '../_models';
 import { select, Store } from '@ngrx/store';
@@ -13,8 +12,8 @@ import { Product } from '../_models/product';
 export class HeaderComponent implements OnInit {
 
 
-  counter: Counter;
   user: User;
+  cart: Product[] = [];
 
   constructor(
 
@@ -23,14 +22,12 @@ export class HeaderComponent implements OnInit {
 
 ) {
 
-  
-  this.counter = this.accountService.counterValue;
+
   this.user = this.accountService.userValue;
   store.pipe(select('shop')).subscribe(data => (this.cart = data.cart));
 
   }
 
-  cart: Product[] = [];
  
   ngOnInit() {
 
