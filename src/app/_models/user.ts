@@ -15,5 +15,6 @@ export class User {
     form_check2: string;
     token: string;
     jwtToken: string;
+    web: string;
 
 }
